@@ -61,32 +61,32 @@
         </div>
         <div class="row">
             <div class="col-1">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
+            <div class="col-2 text-center">Reference A</div>
+            <div class="col-2 text-center">Reference B</div>
             <div class="col-2">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
+            <div class="col-2 text-center">Reference A</div>
+            <div class="col-2 text-center">Reference B</div>
             <div class="col-1">&nbsp;</div>
         </div>  
         <div class="row">
             <div class="col-1">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
                 </audio>
             </div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
                 </audio>
             </div>
             <div class="col-2">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
                 </audio>
             </div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
                 </audio>
@@ -95,18 +95,18 @@
         </div>
         <div class="row">&nbsp;</div>
         <div class="row">
-            <div class="col-6 text-center"><b>Sample 1</b></div>
-            <div class="col-6 text-center"><b>Sample 2</b></div>
+            <div class="col-6 text-center">Sample 1</div>
+            <div class="col-6 text-center">Sample 2</div>
         </div>  
         <div class="row">
             <div class="col-2">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8Morph.mp3" type="audio/wav">
                 </audio>
             </div>
             <div class="col-4">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 text-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8AB.Mix.5.mp3" type="audio/wav">
                 </audio>
@@ -146,23 +146,11 @@
 </template>
 
 
-
 <script type="module">
 import { mapActions } from "vuex";
 export default {
-  props: ['id', 'audio_samples', 'task_index'],
   data() {
-    return {
-      num_thumbs: 7,
-      sound_index: 0,
-      sounds_in_sequence: [],
-      current_playing_arrangement: "",
-      disable_mouse_over_and_out: false,
-      rem_left_line_widths: {},
-      left_rel_line_widths: {},
-      right_rel_line_widths: {},
-      rem_right_line_widths: {},
-    };
+    return {};
   },
   created() {},
   methods: {
@@ -206,5 +194,5 @@ body {
 .div {
   border: solid black 1px;
 }
-audio { width: 220px; }
+audio { width: 175px; }
 </style>
