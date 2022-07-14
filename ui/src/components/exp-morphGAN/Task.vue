@@ -125,14 +125,16 @@
         <div class="row">
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Morph" @change="update_checkbox($event)">Sample 1 is a morph.
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" @change="update_checkbox($event)">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Sample 1 is morph.
                     </label>
-                </div> <br>
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Mix" @change="update_checkbox($event)">Sample 2 is a morph.
+                    </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" @change="update_checkbox($event)">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Sample 2 is morph.
                     </label>
                 </div>
             </div>
