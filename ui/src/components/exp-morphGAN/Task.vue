@@ -143,10 +143,24 @@
 </html>
 </template>
 
-<script>
+
+
+<script type="module">
+import { mapActions } from "vuex";
 export default {
+  props: ['id', 'audio_samples', 'task_index'],
   data() {
-    return {};
+    return {
+      num_thumbs: 7,
+      sound_index: 0,
+      sounds_in_sequence: [],
+      current_playing_arrangement: "",
+      disable_mouse_over_and_out: false,
+      rem_left_line_widths: {},
+      left_rel_line_widths: {},
+      right_rel_line_widths: {},
+      rem_right_line_widths: {},
+    };
   },
   created() {},
   methods: {
@@ -168,7 +182,6 @@ export default {
 .overview-container {
   margin: 2%;
 }
-
 .heading-overview {
   font-weight: bolder;
   font-size: 250%;
