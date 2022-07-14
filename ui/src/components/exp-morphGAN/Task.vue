@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
-                <h4><b><u>5. Individual Listensing Trials</u></b></h4>
+                <h4><b><u>5. Listensing Trials</u></b></h4>
             </div>
             <div class="col-1">&nbsp;</div>
         </div>   
