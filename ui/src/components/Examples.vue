@@ -228,25 +228,16 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
-import uiConfig from "../config/config";
-
 export default {
   data() {
-    return {
-      instruction_video_url: "",
-    };
+    return {};
   },
-  beforeMount() {
-    const conf = uiConfig.uiConfig;
-    this.instruction_video_url = conf.instruction_video_url;
-  },
+  created() {},
   methods: {
-    ...mapActions(["updateClickAnalytics"]),
     validateForm() {
       return true;
     },
-  },
+  }
 };
 </script>
 
@@ -278,5 +269,5 @@ body {
 .div {
   border: solid black 1px;
 }
-audio { width: 220px; }
+audio { width: 175px; }
 </style>
