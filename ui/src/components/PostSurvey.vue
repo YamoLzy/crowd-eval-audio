@@ -1,189 +1,141 @@
+<script setup>
+</script>
+
 <template>
-  <div class="row animatedsound-container">
-    <div class="heading"> 4. Post Listening Test Survey</div>
-    <div>&nbsp;</div>
-    <div class="row">Please share some more details with us.</div>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>post-survey</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-topbar">
+        <br />
+        <br />
+        <div class="container-fluid">
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2><b>MorphGAN Evaluation Questions</b></h2>
+                </div>
+            </div>
+            <div class="row">&nbsp;</div>
+        </div>
+    </nav>
 
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div>
-        1. What type of headphones did you listen with when
-        performing this listening test? (e.g.: Noise cancellation headphones, earbuds etc. Please feel free to add the brand of your headphones as well.)
-      </div>
-    </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="col-5">
-        <input
-          type="text"
-          name="speaker_headphones"
-          id="speaker_headphones"
-          size="50"
-          @change="update_field($event, 'speaker_headphones')"
-        />
-      </div>
-      <div class="col-7"></div>
-    </div>
+    <div class="container-fluid" style="width: 100%">
+    
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-1">&nbsp;</div>
+            <div class="col-10">
+                <h4><b><u>6. Post-Survey</u></b></h4>
+            </div>
+            <div class="col-1">&nbsp;</div>
+        </div>   
 
-    <div class="row">&nbsp;</div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div>
-        2. In the last 2 months, approximately how many HITs related to audio
-        (quality evaluation, transcription, annotation etc.,) have you attempted
-        on Mechanical Turk?
-      </div>
-    </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="col-5">
-        <select
-          name="past_audiotests"
-          id="past_audiotests"
-          style="width: 100%"
-          v-model="past_audiotests"
-          @change="update_field($event, 'past_audiotests')"
-        >
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value=">10">&gt;10</option>
-        </select>
-      </div>
-      <div class="col-7"></div>
-    </div>
 
-    <div class="row">&nbsp;</div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div>
-        3. How would you describe your surrounding environment where you are
-        attempting this HIT? (e.g.: Home, Library, Office environment etc.)
-      </div>
-    </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="col-5">
-        <input
-          type="text"
-          name="environment"
-          id="environment"
-          size="50"
-          @change="update_field($event, 'environment')"
-        />
-      </div>
-      <div class="col-7"></div>
-    </div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-1">&nbsp;</div>
+            <div class="col-10">
+                1. How easy or complex was this listening test for you? 
+                Please give us some feedback on what was confusing with this test.
+                (including problems you faced reading the instructions, listening to the samples etc.)             
+            </div>
+            <div class="col-1">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-1">&nbsp;</div>
+            <div class="col-10">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+            </div>
+            <div class="col-1">&nbsp;</div>
+        </div>
 
-    <div class="row">&nbsp;</div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div>
-        4. How easy or complex was this listening test? Please give us feedback
-        on what was confusing with this HIT including problems you faced reading
-        the instructions, listening to the samples etc.
-      </div>
-    </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="col-5">
-        <textarea
-          id="confusing"
-          name="confusing"
-          cols="90"
-          rows="4"
-          maxlength="300"
-          tabindex="9"
-          @change="update_field($event, 'confusing')"
-        ></textarea>
-      </div>
-      <div class="col-7"></div>
-    </div>
 
-    <div class="row">&nbsp;</div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div>5. Any additional comments?</div>
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-1">&nbsp;</div>
+            <div class="col-10">
+                2. Do you have any additional feedback?
+            </div>
+            <div class="col-1">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-1">&nbsp;</div>
+            <div class="col-10">
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+            </div>
+            <div class="col-1">&nbsp;</div>
+        </div>
     </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-      <div class="col-5">
-        <textarea
-          id="additional_comments"
-          name="additional_comments"
-          cols="90"
-          rows="4"
-          maxlength="300"
-          tabindex="9"
-          @change="update_field($event, 'additional_comments')"
-        ></textarea>
-      </div>
-      <div class="col-7"></div>
-    </div>
-  </div>
+</body>
+</html>
 </template>
 
-<script  type="module">
-import { mapActions, mapGetters } from "vuex";
+<script>
+import { mapActions } from "vuex";
+import uiConfig from "../config/config";
 
 export default {
   data() {
     return {
-      speaker_headphones: "",
-      past_audiotests: "",
-      environment: "",
+      instruction_video_url: "",
     };
   },
-  created() {},
-  computed: {
-    ...mapGetters(["formData"]),
+  beforeMount() {
+    const conf = uiConfig.uiConfig;
+    this.instruction_video_url = conf.instruction_video_url;
   },
   methods: {
-    ...mapActions(["updateFormData"]),
-    update_field($event, nm) {
-      var obj = {};
-      obj[nm] = $event.target.value;
-      this.updateFormData(obj);
-    },
-    validateForm(){
+    ...mapActions(["updateClickAnalytics"]),
+    validateForm() {
       return true;
-    }
+    },
   },
 };
 </script>
 
+
 <style scoped>
-/* fix too small font-size in both Chrome & Firefox */
-* {
-  font: inherit;
+.overview-container {
+  margin: 2%;
 }
 
-audio {
-  width: 100%;
-}
-
-.animatedsound-container {
-  margin-left: 1%;
-}
-
-.heading {
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
+.heading-overview {
+  font-weight: bolder;
   font-size: 250%;
+  text-align: center;
 }
-
 .notebox {
   border: solid black 1px;
   width: 90%;
   padding: 5px;
+  margin-left: 1%;
+}
+body {
+  font-family: 'Open Sans', 'sans-serif';
+  width: 100%;
+  /* font-family: 'Montserrat', Arial, Helvetica, sans-serif; */
+}
+.bg-topbar {
+  background-color: rgb(250, 240, 226);
+}
+.div {
+  border: solid black 1px;
 }
 </style>
