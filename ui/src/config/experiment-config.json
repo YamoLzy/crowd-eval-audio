@@ -4,7 +4,7 @@
     "priming_available": false,
     "ui_levels": [
         "overview",
-        "task",
+        "listening_test",
         "thanks"
     ],
     "ui_levels_names": [
