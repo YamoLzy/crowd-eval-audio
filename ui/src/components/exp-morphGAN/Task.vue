@@ -70,23 +70,23 @@
         </div>  
         <div class="row">
             <div class="col-1">&nbsp;</div>
-            <div class="col-2 text-center">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
                 </audio>
             </div>
-            <div class="col-2 text-center">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
                 </audio>
             </div>
             <div class="col-2">&nbsp;</div>
-            <div class="col-2 text-center">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
                 </audio>
             </div>
-            <div class="col-2 text-center">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
                 </audio>
@@ -100,13 +100,13 @@
         </div>  
         <div class="row">
             <div class="col-2">&nbsp;</div>
-            <div class="col-2 text-center">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8Morph.mp3" type="audio/wav">
                 </audio>
             </div>
             <div class="col-4">&nbsp;</div>
-            <div class="col-2 text-center">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
                     <source src="audio/MixMorph/AlianComputer/8AB.Mix.5.mp3" type="audio/wav">
                 </audio>
@@ -194,5 +194,5 @@ body {
 .div {
   border: solid black 1px;
 }
-audio { width: 175px; }
+audio { width: 190px; }
 </style>
