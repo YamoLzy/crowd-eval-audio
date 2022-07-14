@@ -1,25 +1,15 @@
 {
-    "experiment_name": "exp2",
+    "experiment_name": "exp-morphGAN",
     "url_base": "hci/ui/texture",
     "priming_available": false,
     "ui_levels": [
         "overview",
-        "consent",
-        "examples",
-        "pre_test",
-        "pre_survey",
         "listening_test",
-        "post_survey",
         "thanks"
     ],
     "ui_levels_names": [
         "Overview",
-        "Consent",
-        "Examples",
-        "Pre Test",
-        "Pre Test Survey",
         "Listening Test",
-        "Post Test Survey",
         "Thank you"
     ],
     "task_config": {
