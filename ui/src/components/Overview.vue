@@ -15,9 +15,7 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Instructions/Overview</title>
 </head>
-
 <body>
-    <!-- Title -->
     <nav class="navbar navbar-expand-lg navbar-light bg-topbar">
         <br />
         <br />
