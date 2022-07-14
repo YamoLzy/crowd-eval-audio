@@ -5,13 +5,19 @@
     "ui_levels": [
         "overview",
         "consent",
-        "task",
+        "examples",
+        "pre_test",
+        "pre_survey",
+        "listening_test",
         "post_survey",
         "thanks"
     ],
     "ui_levels_names": [
         "Overview",
         "Consent",
+        "Examples",
+        "Pre Test",
+        "Pre Test Survey",
         "Listening Test",
         "Post Test Survey",
         "Thank you"
