@@ -167,8 +167,9 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  :name="'question_num_' + question_num + '_sample_1'"
-                  :id="'question_num_' + question_num + '_sample_1'"
+                  :name="'question_num_' + question_num "
+                  :id="'question_num_' + question_num + '_sample_1_selected'"
+                  :value="'question_num_' + question_num + '_sample_1_selected'"
                   @change="update_checkbox($event)"
                 />
                 <label
@@ -182,8 +183,9 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  :name="'question_num_' + question_num + '_sample_2'"
-                  :id="'question_num_' + question_num + '_sample_2'"
+                  :name="'question_num_' + question_num"
+                  :id="'question_num_' + question_num + '_sample_2_selected'"
+                  :value="'question_num_' + question_num + '_sample_2_selected'"
                   @change="update_checkbox($event)"
                 />
                 <label
@@ -230,7 +232,7 @@ export default {
     ...mapActions(["updateFormData", "updateClickAnalytics"]),
     update_checkbox(e) {
       var obj = {};
-      obj[e.target.name] = e.target.checked;
+      obj[e.target.name] = e.target.value;
       this.updateFormData(obj);
     },
     get_sample_url(row, col, refname) {

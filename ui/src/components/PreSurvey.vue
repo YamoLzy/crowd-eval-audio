@@ -55,8 +55,8 @@
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="opinion_diff_morph_mix" class="form-label"></label>
+                    <textarea class="form-control" id="opinion_diff_morph_mix" name="opinion_diff_morph_mix" rows="3"></textarea>
                   </div>
             </div>
             <div class="col-1">&nbsp;</div>
@@ -76,8 +76,8 @@
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="software_for_morph" class="form-label"></label>
+                    <textarea class="form-control" id="software_for_morph" name="software_for_morph" rows="3"></textarea>
                   </div>
             </div>
             <div class="col-1">&nbsp;</div>
