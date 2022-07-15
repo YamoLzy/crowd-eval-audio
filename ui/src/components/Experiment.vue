@@ -9,12 +9,16 @@
         <br />
         <Overview v-show="current_level == 'overview'" ref="overview_ref"></Overview>
         <Consent v-show="current_level == 'consent'" ref="consent_ref"></Consent>
+        <Examples v-show="current_level == 'examples'" ref="examples_ref"></Examples>
+        <PreTest v-show="current_level == 'pretest'" ref="pretest_ref"></PreTest>
+        <PreSurvey v-show="current_level == 'presurvey'" ref="presurvey_ref"></PreSurvey>
         <!-- Screening is now moved to a qualifier on AMT -->
         <!-- <Screening v-show="current_level == 'hearing_screening'" ref="hearing_screening_ref"></Screening> -->
         <Priming v-show="current_level == 'priming'" ref="priming_ref"></Priming>
-        <div v-for="task in task_list" :key="task" :value="task">
+        <!-- <div v-for="task in task_list" :key="task" :value="task">
           <Task :id="task"  :key="task" v-if="showLevel(task)" :ref="task+'_ref'" :audio_samples="audio_samples[task]" :task_index="task_list.indexOf(task)"></Task>
-        </div>
+        </div> -->
+        <Task v-show="current_level == 'task'" ref="task_ref" :audio_samples="audio_samples['task']"></Task>
         <PostSurvey v-show="current_level == 'post_survey'" ref="post_survey_ref"></PostSurvey>
         <!--Important. The last page with submit button should be v-if and not v-show. This needs to be dynamically rendered every time the form is updated-->
         <Thanks v-if="current_level == 'thanks'" ref="thanks_ref"></Thanks>
@@ -97,12 +101,13 @@ export default {
   beforeMount(){
     const conf = this.config;
 
-    this.task_list = Object.keys(conf.task_config.audio_samples)
+    //this.task_list = Object.keys(conf.task_config.audio_samples)
+    this.task_list = ['task']
     //Shuffle tasks
     if(conf.task_config.order_random){
       this.task_list = this.task_list.sort(() => Math.random() - 0.5)
     }
-    console.log(this.task_list)
+    
     conf.ui_levels.forEach((lvl,ind) => {
       if(lvl == 'task'){
         this.num_tasks = conf.task_config.num_tasks;
@@ -119,6 +124,10 @@ export default {
     this.current_level_starttime = new Date();
     this.updateCurrentLevel(this.current_level)
     this.audio_samples = this.config.task_config.audio_samples;
+
+
+
+    console.log(this.levels)
   },
   created(){
     this.is_priming_available = uiConfig.uiConfig.priming_available;
@@ -138,6 +147,7 @@ export default {
   methods: {
     ...mapActions(["updateCurrentLevel", "updateFormData", "updateTimeSpent"]),
     showLevel(lvl) {
+      console.log(lvl, this.current_level, (this.current_level == lvl))
       return this.current_level == lvl;
     },
     updateForm(nm, val) {

@@ -23,7 +23,7 @@
             <div class="row">&nbsp;</div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2><b>MorphGAN Evaluation Questions</b></h2>
+                    <h2><b>Morph Evaluation Questions</b></h2>
                 </div>
             </div>
             <div class="row">&nbsp;</div>
@@ -102,8 +102,7 @@
                 3. Pre-test <br>
                 4. Pre-survey <br>
                 5. Individual listening trials <br>
-                6. Comparative listening trials <br>
-                7. Post-survey
+                6. Post-survey
             </div>
             <div class="col-1">&nbsp;</div>
         </div>

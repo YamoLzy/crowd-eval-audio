@@ -15,6 +15,9 @@ import Screening from "./components/Screening.vue";
 import PostSurvey from "./components/PostSurvey.vue";
 import Thanks from "./components/Thanks.vue";
 import Experiment from "./components/Experiment.vue";
+import Examples from "./components/Examples.vue";
+import PreTest from "./components/PreTest.vue";
+import PreSurvey from "./components/PreSurvey.vue";
 
 const Task = defineAsyncComponent(() => import("./components/" + conf.experiment_name + "/Task.vue"))
 
@@ -25,6 +28,9 @@ app.component('Experiment', Experiment)
     .component('Task', Task)
     .component('PostSurvey', PostSurvey)
     .component('Thanks', Thanks)
+    .component('Examples', Examples)
+    .component('PreTest', PreTest)
+    .component('PreSurvey', PreSurvey)
 
 let Priming = {};
 if (conf.priming_available) {

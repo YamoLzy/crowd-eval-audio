@@ -1,29 +1,76 @@
 {
     "experiment_name": "exp-morphGAN",
-    "url_base": "hci/ui/texture",
+    "url_base": "morphGAN",
     "priming_available": false,
     "ui_levels": [
         "overview",
+        "consent",
+        "examples",
+        "pretest",
+        "presurvey",
         "task",
+        "post_survey",
         "thanks"
     ],
     "ui_levels_names": [
         "Overview",
+        "Consent",
+        "Examples",
+        "Pre Test",
+        "Survey",
         "Listening Test",
+        "Post Test Survey",
         "Thank you"
     ],
     "task_config": {
         "num_tasks": 1,
         "order_random": false,
         "audio_samples": {
-            "task_1": {
-                "ref1_url": "https://animatedsound-listening-test.s3.us-east-2.amazonaws.com/audio_samples/textures/exp2/waterfilldadafilldazedadavdazenn.wav",
-                "audio_1_url": "https://animatedsound-listening-test.s3.us-east-2.amazonaws.com/audio_samples/textures/exp2/waterfilldadafilldathdadavdazenn.wav",
-                "audio_2_url": "https://animatedsound-listening-test.s3.us-east-2.amazonaws.com/audio_samples/textures/exp2/waterfilldadafilldasxdadavdazenn.wav",
-                "audio_3_url": "https://animatedsound-listening-test.s3.us-east-2.amazonaws.com/audio_samples/textures/exp2/waterfilldadafilldaondadavdazenn.wav",
-                "audio_4_url": "https://animatedsound-listening-test.s3.us-east-2.amazonaws.com/audio_samples/textures/exp2/waterfilldadafilldaetdadavdazenn.wav",
-                "audio_5_url": "https://animatedsound-listening-test.s3.us-east-2.amazonaws.com/audio_samples/textures/exp2/waterfilldadafilldafidadavdazenn.wav",
-                "ref2_url": "https://animatedsound-listening-test.s3.us-east-2.amazonaws.com/audio_samples/textures/exp2/waterfilldadafilldaonzedadavdazenn.wav"
+            "task": {
+                "num_questions": 3,
+
+                "q_1_col_1_ref_a": "https://",
+                "q_1_col_1_ref_b": "https://",
+                "q_1_col_1_sample": "https://",
+                "q_1_col_2_ref_a": "https://",
+                "q_1_col_2_ref_b": "https://",
+                "q_1_col_2_sample": "https://",
+
+                "q_2_col_1_ref_a": "https://",
+                "q_2_col_1_ref_b": "https://",
+                "q_2_col_1_sample": "https://",
+                "q_2_col_2_ref_a": "https://",
+                "q_2_col_2_ref_b": "https://",
+                "q_2_col_2_sample": "https://",
+
+                "q_3_col_1_ref_a": "https://",
+                "q_3_col_1_ref_b": "https://",
+                "q_3_col_1_sample": "https://",
+                "q_3_col_2_ref_a": "https://",
+                "q_3_col_2_ref_b": "https://",
+                "q_3_col_2_sample": "https://"
+            },
+
+            "examples": {
+                "num_questions": 1,
+
+                "q_1_col_1_ref_a": "https://",
+                "q_1_col_1_ref_b": "https://",
+                "q_1_col_1_sample": "https://",
+                "q_1_col_2_ref_a": "https://",
+                "q_1_col_2_ref_b": "https://",
+                "q_1_col_2_sample": "https://"
+            },
+
+            "pretest": {
+                "num_questions": 1,
+
+                "q_1_col_1_ref_a": "https://",
+                "q_1_col_1_ref_b": "https://",
+                "q_1_col_1_sample": "https://",
+                "q_1_col_2_ref_a": "https://",
+                "q_1_col_2_ref_b": "https://",
+                "q_1_col_2_sample": "https://"
             }
         }
     },
