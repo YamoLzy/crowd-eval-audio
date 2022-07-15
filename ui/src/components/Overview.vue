@@ -98,11 +98,12 @@
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
                 1. Instructions (This section) <br>
-                2. Examples of audio morphs <br>
-                3. Pre-test <br>
-                4. Pre-survey <br>
-                5. Individual listening trials <br>
-                6. Post-survey
+                2. Research Consent <br>
+                3. Examples of audio morphs <br>
+                4. Pre-test <br>
+                5. Pre-survey <br>
+                6. Individual listening trials <br>
+                7. Post-survey
             </div>
             <div class="col-1">&nbsp;</div>
         </div>
