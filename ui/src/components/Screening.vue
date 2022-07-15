@@ -32,7 +32,7 @@
           controlsList="nodownload noplaybackrate"
         >
           <source
-            src="../assets/audio-samples/hearing_test_audio/1000Hztone.wav"
+            src=""
             type="audio/wav"
           />
         </audio>
