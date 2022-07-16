@@ -15,8 +15,8 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>pre-survey</title>
 </head>
+
 <body>
-    <!-- Title -->
     <nav class="navbar navbar-expand-lg navbar-light bg-topbar">
         <br />
         <br />
@@ -55,9 +55,15 @@
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
                 <div class="mb-3">
-                    <label for="opinion_diff_morph_mix" class="form-label"></label>
-                    <textarea class="form-control" id="opinion_diff_morph_mix" name="opinion_diff_morph_mix" rows="3"></textarea>
-                  </div>
+                  <textarea 
+                    class="form-control" 
+                    name="answer_1"
+                    id="pre_survey_answer_1" 
+                    rows="3" 
+                    @change="update_field($event, 'answer_1')"
+                  >
+                  </textarea>
+                </div>
             </div>
             <div class="col-1">&nbsp;</div>
         </div>
@@ -76,9 +82,15 @@
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
                 <div class="mb-3">
-                    <label for="software_for_morph" class="form-label"></label>
-                    <textarea class="form-control" id="software_for_morph" name="software_for_morph" rows="3"></textarea>
-                  </div>
+                  <textarea 
+                    class="form-control" 
+                    name="answer_2"
+                    id="pre_survey_answer_2" 
+                    rows="3" 
+                    @change="update_field($event, 'answer_2')"
+                  >
+                  </textarea>
+                </div>
             </div>
             <div class="col-1">&nbsp;</div>
         </div>
@@ -88,21 +100,23 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
-import uiConfig from "../config/config";
-
+import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
-      instruction_video_url: "",
     };
   },
-  beforeMount() {
-    const conf = uiConfig.uiConfig;
-    this.instruction_video_url = conf.instruction_video_url;
+  created() {},
+  computed: {
+    ...mapGetters(["formData"]),
   },
   methods: {
-    ...mapActions(["updateClickAnalytics"]),
+    ...mapActions(["updateFormData"]),
+    update_field($event, nm) {
+      var obj = {};
+      obj[nm] = $event.target.value;
+      this.updateFormData(obj);
+    },
     validateForm() {
       return true;
     },
