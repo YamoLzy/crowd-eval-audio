@@ -56,28 +56,27 @@
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
 
+        <div class="row">
+            <div class="col-6 text-center"><b>Morph</b></div>
+            <div class="col-6 text-center"><b>Mix/Crossfade</b></div>
+        </div>  
+        <div class="row">&nbsp;</div>
+        <div class="row">
+            <div class="col-1">&nbsp;</div>
+            <div class="col-2 text-center"><b>Reference A</b></div>
+            <div class="col-2 text-center"><b>Reference B</b></div>
+            <div class="col-2">&nbsp;</div>
+            <div class="col-2 text-center"><b>Reference A</b></div>
+            <div class="col-2 text-center"><b>Reference B</b></div>
+            <div class="col-1">&nbsp;</div>
+        </div>  
+
         <div
-          v-for="question_num in examples_num_questions"
+          v-for="question_num in task_num_questions"
           :key="question_num"
           :value="question_num"
         >
-
-            <div class="row">
-                <div class="col-6 text-center"><b>Morph</b></div>
-                <div class="col-6 text-center"><b>Mix/Crossfade</b></div>
-            </div>  
-            <div class="row">&nbsp;</div>
-            <div class="row">
-                <div class="col-1">&nbsp;</div>
-                <div class="col-2 text-center"><b>Reference A</b></div>
-                <div class="col-2 text-center"><b>Reference B</b></div>
-                <div class="col-2">&nbsp;</div>
-                <div class="col-2 text-center"><b>Reference A</b></div>
-                <div class="col-2 text-center"><b>Reference B</b></div>
-                <div class="col-1">&nbsp;</div>
-            </div>  
-
-            <div class="row">&nbsp;</div>
+            <!-- <div class="row">&nbsp;</div> -->
             <div class="row">
                 <div class="col-1 text-end">{{ question_num }}.</div>
                 <div class="col-10"><hr></div>
@@ -142,6 +141,7 @@
                 </div>
                 <div class="col-2">&nbsp;</div>
             </div>
+            <div class="row">&nbsp;</div>
         </div>
     </div>
 </body>
