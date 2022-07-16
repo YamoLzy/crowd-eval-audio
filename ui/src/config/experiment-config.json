@@ -1,6 +1,6 @@
 {
     "experiment_name": "exp-morphGAN",
-    "url_base": "morphGAN",
+    "url_base": "research/morphgan/test_ui/",
     "priming_available": false,
     "ui_levels": [
         "overview",
