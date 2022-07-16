@@ -55,7 +55,7 @@ export default {
   computed: {
     ...mapGetters(["formData", "timeSpent", "clickAnalytics"]),
     turkSubmissionURL() {
-      return this.formData.turkSubmitTo + "/mturk/externalSubmit";
+      return "https://script.google.com/macros/s/AKfycbw6yEZK0whSTEtDAJVkvHbMbgBP1_YrqDYcjs2ItC0Z5Hz53DRkK966kEMUJCeD2A87qA/exec";
     },
   },
   methods: {
