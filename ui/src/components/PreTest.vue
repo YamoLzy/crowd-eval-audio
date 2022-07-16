@@ -55,12 +55,13 @@
 
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">
+
+        <div
+          v-for="question_num in task_num_questions"
+          :key="question_num"
+          :value="question_num"
+        >
+          <div class="row">
             <div class="col-1">&nbsp;</div>
             <div class="col-2 text-center"><b>Reference A</b></div>
             <div class="col-2 text-center"><b>Reference B</b></div>
@@ -68,277 +69,161 @@
             <div class="col-2 text-center"><b>Reference A</b></div>
             <div class="col-2 text-center"><b>Reference B</b></div>
             <div class="col-1">&nbsp;</div>
-        </div>  
-        <div class="row">
+          </div>  
+          <div class="row">
             <div class="col-1">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
+                    <source
+                        :src="get_sample_url(question_num, 1, 'a')"
+                        type="audio/wav"
+                    />
                 </audio>
             </div>
-            <div class="col-2">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
+                    <source
+                        :src="get_sample_url(question_num, 2, 'b')"
+                        type="audio/wav"
+                    />
                 </audio>
             </div>
             <div class="col-2">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
+                    <source
+                        :src="get_sample_url(question_num, 1, 'a')"
+                        type="audio/wav"
+                    />
                 </audio>
             </div>
-            <div class="col-2">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
+                    <source
+                        :src="get_sample_url(question_num, 2, 'b')"
+                        type="audio/wav"
+                    />
                 </audio>
             </div>
             <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
+          </div>
+          <div class="row">&nbsp;</div>
+          <div class="row">
             <div class="col-6 text-center"><b>Sample 1</b></div>
             <div class="col-6 text-center"><b>Sample 2</b></div>
-        </div>  
-        <div class="row">
+          </div>  
+          <div class="row">
             <div class="col-2">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8Morph.mp3" type="audio/wav">
+                    <source
+                        :src="get_sample_url(question_num, 1)"
+                        type="audio/wav"
+                    />
                 </audio>
             </div>
             <div class="col-4">&nbsp;</div>
-            <div class="col-2">
+            <div class="col-2 d-flex justify-content-center">
                 <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8AB.Mix.5.mp3" type="audio/wav">
+                    <source
+                        :src="get_sample_url(question_num, 2)"
+                        type="audio/wav"
+                    />
                 </audio>
             </div>
             <div class="col-2">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
+          </div>
+          <div class="row">&nbsp;</div>
+          <div class="row">
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
-                1. Which audio sample is a morph and not a mix/crossfade? 
+                {{ question_num }}. Which audio sample is a morph and not a mix/crossfade? 
             </div>
             <div class="col-1">&nbsp;</div>
-        </div>  
-        <div class="row">&nbsp;</div>
-        <div class="row">
+          </div>  
+          <div class="row">&nbsp;</div>
+          <div class="row">
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Morph">Sample 1 is a morph.
-                    </label>
-                </div> <br>
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Mix">Sample 2 is a morph.
-                    </label>
-                </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  :name="'question_num_' + question_num "
+                  :id="'question_num_' + question_num + '_sample_1_selected'"
+                  :value="'question_num_' + question_num + '_sample_1_selected'"
+                  @change="update_checkbox($event)"
+                />
+                <label
+                  class="form-check-label"
+                  for="'question_num_'+question_num+'_sample_2'"
+                >
+                  Sample 1 is a morph.
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  :name="'question_num_' + question_num"
+                  :id="'question_num_' + question_num + '_sample_2_selected'"
+                  :value="'question_num_' + question_num + '_sample_2_selected'"
+                  @change="update_checkbox($event)"
+                />
+                <label
+                  class="form-check-label"
+                  for="'question_num_'+question_num+'_sample_2'"
+                >
+                  Sample 2 is a morph.
+                </label>
+              </div>
             </div>
             <div class="col-1">&nbsp;</div>
-        </div>  
-
-        <div class="row">&nbsp;</div>
-        <div class="row">
+          </div>  
+          <div class="row">&nbsp;</div>
+          <div class="row">
             <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
+            <div class="col-10"><hr /></div>
             <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
-            <div class="col-1">&nbsp;</div>
-        </div>  
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/SciFiHeli/SciFiHeli_A.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/SciFiHeli/SciFiHeli_B.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/SciFiHeli/SciFiHeli_A.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/SciFiHeli/SciFiHeli_B.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-6 text-center"><b>Sample 1</b></div>
-            <div class="col-6 text-center"><b>Sample 2</b></div>
-        </div>  
-        <div class="row">
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/SciFiHeli/SciFiHeli_AB.Mix.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-4">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/SciFiHeli/SciFiHeli_AB.Morph.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10">
-                2. Which audio sample is a morph and not a mix/crossfade? 
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>  
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10">
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Morph">Sample 1 is a morph.
-                    </label>
-                </div> <br>
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Mix">Sample 2 is a morph.
-                    </label>
-                </div>
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>  
-
-
-
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
-            <div class="col-1">&nbsp;</div>
-        </div>  
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_A.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_B.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_A.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_B.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-6 text-center"><b>Sample 1</b></div>
-            <div class="col-6 text-center"><b>Sample 2</b></div>
-        </div>  
-        <div class="row">
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_Morph.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-4">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_AB.Mix.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10">
-                3. Which audio sample is a morph and not a mix/crossfade? 
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>  
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10">
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Morph">Sample 1 is a morph.
-                    </label>
-                </div> <br>
-                <div class="radio disabled" id="onequestion">
-                    <label class="checkbox-inline">
-                        <input type="radio" name="1" value="Mix">Sample 2 is a morph.
-                    </label>
-                </div>
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>  
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
-            <div class="col-1">&nbsp;</div>
+          </div>
         </div>
     </div>
 </body>
 </html>
 </template>
 
-<script>
-import { mapActions } from "vuex";
-import uiConfig from "../config/config";
 
+<script type="module">
+import { mapActions } from "vuex";
 export default {
+  props: ["id", "audio_samples", "task_index"],
   data() {
     return {
-      instruction_video_url: "",
+      task_num_questions: 0,
+      task_audio_samples: [],
     };
   },
-  beforeMount() {
-    const conf = uiConfig.uiConfig;
-    this.instruction_video_url = conf.instruction_video_url;
+  created() {
+    this.task_num_questions = this.audio_samples.num_questions;
+    this.task_audio_samples = this.audio_samples;
+    console.log(this.task_num_questions);
   },
   methods: {
-    ...mapActions(["updateClickAnalytics"]),
+    ...mapActions(["updateFormData", "updateClickAnalytics"]),
+    update_checkbox(e) {
+      var obj = {};
+      obj[e.target.name] = e.target.value;
+      this.updateFormData(obj);
+    },
+    get_sample_url(row, col, refname) {
+      if (refname != "") {
+        return this.task_audio_samples[
+          "q_" + row + "_col_" + col + "_ref_" + refname
+        ];
+      } else {
+        return this.task_audio_samples["q_" + row + "_col_" + col + "_sample"];
+      }
+    },
     validateForm() {
       return true;
     },
