@@ -8,8 +8,8 @@
       <div class="col-10 container" style="">
         <br />
         <Overview v-show="current_level == 'overview'" ref="overview_ref"></Overview>
-        <Consent v-show="current_level == 'consent'" ref="consent_ref" :audio_samples="audio_samples['examples']"></Consent>
-        <Examples v-show="current_level == 'examples'" ref="examples_ref"></Examples>
+        <Consent v-show="current_level == 'consent'" ref="consent_ref"></Consent>
+        <Examples v-show="current_level == 'examples'" ref="examples_ref" :audio_samples="audio_samples['examples']"></Examples>
         <PreTest v-show="current_level == 'pretest'" ref="pretest_ref" :audio_samples="audio_samples['pretest']"></PreTest>
         <PreSurvey v-show="current_level == 'presurvey'" ref="presurvey_ref"></PreSurvey>
         <!-- Screening is now moved to a qualifier on AMT -->
