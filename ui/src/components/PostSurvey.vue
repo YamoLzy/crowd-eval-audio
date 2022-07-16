@@ -55,10 +55,16 @@
         <div class="row">
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
+              <div class="mb-3">
+                <textarea 
+                  class="form-control" 
+                  name="answer_1"
+                  id="post_survey_answer_1" 
+                  rows="3" 
+                  @change="update_field($event, 'answer_1')"
+                >
+                </textarea>
+              </div>
             </div>
             <div class="col-1">&nbsp;</div>
         </div>
@@ -75,10 +81,16 @@
         <div class="row">
             <div class="col-1">&nbsp;</div>
             <div class="col-10">
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label"></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
+              <div class="mb-3">
+                <textarea 
+                  class="form-control" 
+                  name="answer_2"
+                  id="post_survey_answer_2" 
+                  rows="3" 
+                  @change="update_field($event, 'answer_2')"
+                >
+                </textarea>
+              </div>
             </div>
             <div class="col-1">&nbsp;</div>
         </div>
@@ -88,21 +100,23 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
-import uiConfig from "../config/config";
-
+import { mapActions, mapGetters } from "vuex";
 export default {
   data() {
     return {
-      instruction_video_url: "",
     };
   },
-  beforeMount() {
-    const conf = uiConfig.uiConfig;
-    this.instruction_video_url = conf.instruction_video_url;
+  created() {},
+  computed: {
+    ...mapGetters(["formData"]),
   },
   methods: {
-    ...mapActions(["updateClickAnalytics"]),
+    ...mapActions(["updateFormData"]),
+    update_field($event, nm) {
+      var obj = {};
+      obj[nm] = $event.target.value;
+      this.updateFormData(obj);
+    },
     validateForm() {
       return true;
     },
