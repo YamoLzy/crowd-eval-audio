@@ -18,7 +18,6 @@
 
 
 <body>
-    <!-- Title -->
     <nav class="navbar navbar-expand-lg navbar-light bg-topbar">
         <br />
         <br />
@@ -56,171 +55,93 @@
 
         <div class="row">&nbsp;</div>
         <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-6 text-center"><b>Morph</b></div>
-            <div class="col-6 text-center"><b>Mix/Crossfade</b></div>
-        </div>  
 
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2 text-center"><b>Reference A</b></div>
-            <div class="col-2 text-center"><b>Reference B</b></div>
-            <div class="col-1">&nbsp;</div>
-        </div>  
+        <div
+          v-for="question_num in examples_num_questions"
+          :key="question_num"
+          :value="question_num"
+        >
 
+            <div class="row">
+                <div class="col-6 text-center"><b>Morph</b></div>
+                <div class="col-6 text-center"><b>Mix/Crossfade</b></div>
+            </div>  
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-1">&nbsp;</div>
+                <div class="col-2 text-center"><b>Reference A</b></div>
+                <div class="col-2 text-center"><b>Reference B</b></div>
+                <div class="col-2">&nbsp;</div>
+                <div class="col-2 text-center"><b>Reference A</b></div>
+                <div class="col-2 text-center"><b>Reference B</b></div>
+                <div class="col-1">&nbsp;</div>
+            </div>  
 
-
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
-                </audio>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-1 text-end">{{ question_num }}.</div>
+                <div class="col-10"><hr></div>
+                <div class="col-1">&nbsp;</div>
             </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
-                </audio>
+            <div class="row">
+                <div class="col-1">&nbsp;</div>
+                <div class="col-2 d-flex justify-content-center">
+                    <audio controls>
+                        <source
+                            :src="get_sample_url(question_num, 1, 'a')"
+                            type="audio/wav"
+                        />
+                    </audio>
+                </div>
+                <div class="col-2 d-flex justify-content-center">
+                    <audio controls>
+                        <source
+                            :src="get_sample_url(question_num, 2, 'b')"
+                            type="audio/wav"
+                        />
+                    </audio>
+                </div>
+                <div class="col-2">&nbsp;</div>
+                <div class="col-2 d-flex justify-content-center">
+                    <audio controls>
+                        <source
+                            :src="get_sample_url(question_num, 1, 'a')"
+                            type="audio/wav"
+                        />
+                    </audio>
+                </div>
+                <div class="col-2 d-flex justify-content-center">
+                    <audio controls>
+                        <source
+                            :src="get_sample_url(question_num, 2, 'b')"
+                            type="audio/wav"
+                        />
+                    </audio>
+                </div>
+                <div class="col-1">&nbsp;</div>
             </div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8A.mp3" type="audio/wav">
-                </audio>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-2">&nbsp;</div>
+                <div class="col-2 d-flex justify-content-center">
+                    <audio controls>
+                        <source
+                            :src="get_sample_url(question_num, 1)"
+                            type="audio/wav"
+                        />
+                    </audio>
+                </div>
+                <div class="col-4">&nbsp;</div>
+                <div class="col-2 d-flex justify-content-center">
+                    <audio controls>
+                        <source
+                            :src="get_sample_url(question_num, 2)"
+                            type="audio/wav"
+                        />
+                    </audio>
+                </div>
+                <div class="col-2">&nbsp;</div>
             </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8B.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8Morph.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-4">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/AlianComputer/8AB.Mix.5.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-        </div>
-
-
-
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Cherokee.drumloop/cherokee.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Cherokee.drumloop/drumloop.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Cherokee.drumloop/cherokee.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Cherokee.drumloop/drumloop.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Cherokee.drumloop/cherokee.drumloop.Morph.Left.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-4">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Cherokee.drumloop/cherokee.drumloop.Mix.5.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_A.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_B.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_A.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_B.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-1">&nbsp;</div>
-        </div>
-        <div class="row">&nbsp;</div>
-        <div class="row">
-            <div class="col-2">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_Morph.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-4">&nbsp;</div>
-            <div class="col-2">
-                <audio controls>
-                    <source src="audio/MixMorph/Passby/Passby_AB.Mix.mp3" type="audio/wav">
-                </audio>
-            </div>
-            <div class="col-2">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div class="col-1">&nbsp;</div>
-            <div class="col-10"><hr></div>
-            <div class="col-1">&nbsp;</div>
         </div>
     </div>
 </body>
@@ -229,11 +150,28 @@
 
 <script>
 export default {
+  props: ["id", "audio_samples", "task_index"],
   data() {
-    return {};
+    return {
+      task_num_questions: 0,
+      task_audio_samples: [],
+    };
   },
-  created() {},
+  created() {
+    this.task_num_questions = this.audio_samples.num_questions;
+    this.task_audio_samples = this.audio_samples;
+    console.log(this.task_num_questions);
+  },
   methods: {
+    get_sample_url(row, col, refname) {
+      if (refname != "") {
+        return this.task_audio_samples[
+          "q_" + row + "_col_" + col + "_ref_" + refname
+        ];
+      } else {
+        return this.task_audio_samples["q_" + row + "_col_" + col + "_sample"];
+      }
+    },
     validateForm() {
       return true;
     },
