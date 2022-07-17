@@ -41,7 +41,7 @@
           <div class="col-1">&nbsp;</div>
           <div class="col-10">
             <h4>
-              <b><u>5. Listening Trials</u></b>
+              <b><u>6. Listening Trials</u></b>
             </h4>
           </div>
           <div class="col-1">&nbsp;</div>
