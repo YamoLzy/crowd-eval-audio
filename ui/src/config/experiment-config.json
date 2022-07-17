@@ -52,7 +52,7 @@
             },
 
             "examples": {
-                "num_questions": 3,
+                "num_questions": 2,
 
                 "q_1_col_1_ref_a": "https://",
                 "q_1_col_1_ref_b": "https://",
@@ -66,18 +66,12 @@
                 "q_2_col_1_sample": "https://",
                 "q_2_col_2_ref_a": "https://",
                 "q_2_col_2_ref_b": "https://",
-                "q_2_col_2_sample": "https://",
+                "q_2_col_2_sample": "https://"
 
-                "q_3_col_1_ref_a": "https://",
-                "q_3_col_1_ref_b": "https://",
-                "q_3_col_1_sample": "https://",
-                "q_3_col_2_ref_a": "https://",
-                "q_3_col_2_ref_b": "https://",
-                "q_3_col_2_sample": "https://"
             },
 
             "pretest": {
-                "num_questions": 3,
+                "num_questions": 2,
 
                 "q_1_col_1_ref_a": "https://",
                 "q_1_col_1_ref_b": "https://",
@@ -91,14 +85,8 @@
                 "q_2_col_1_sample": "https://",
                 "q_2_col_2_ref_a": "https://",
                 "q_2_col_2_ref_b": "https://",
-                "q_2_col_2_sample": "https://",
+                "q_2_col_2_sample": "https://"
 
-                "q_3_col_1_ref_a": "https://",
-                "q_3_col_1_ref_b": "https://",
-                "q_3_col_1_sample": "https://",
-                "q_3_col_2_ref_a": "https://",
-                "q_3_col_2_ref_b": "https://",
-                "q_3_col_2_sample": "https://"
             }
         }
     },
