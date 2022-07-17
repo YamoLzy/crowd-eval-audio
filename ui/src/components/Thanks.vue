@@ -1,6 +1,6 @@
 <template>
   <div class="row animatedsound-container">
-    <div class="heading">5. Thank you</div>
+    <div class="heading">8. Thank you</div>
     <div>&nbsp;</div>
     <div class="row">Please do not forget to submit this HIT!.</div>
 
